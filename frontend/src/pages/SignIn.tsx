@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Signatom } from "../atoms/sign";
+import { Signatom } from "../atoms/Sign";
 import { useRecoilState } from "recoil";
 
 export default function SignInPage() {
@@ -12,7 +12,7 @@ export default function SignInPage() {
 
   async function handleSignup() {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
+      const response = await axios.post("https://examinationcell-backend.onrender.com/api/v1/user/signin", {
         regNo: regNo,
         password: password,
       });
